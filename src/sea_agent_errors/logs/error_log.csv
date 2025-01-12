@@ -1,0 +1,17 @@
+Timestamp,Error Type,Error Message,Component,Severity,Context,Stack Trace
+2025-01-11T20:06:48.847861,ProjectGenerationError,'ErrorAnalyzer' object has no attribute 'get_improvement_report',project_generation,CRITICAL,"{""project_dir"": ""src\\warehouse\\web-app\\WebApp"", ""task_description"": ""Create a full-stack web application with Flask backend, React frontend, PostgreSQL database, and user authentication system""}","Traceback (most recent call last):
+  File ""C:\Windows\System32\cc-working-dir\SEA\src\agent\project_generator.py"", line 176, in create_project_structure
+    error_report = self.error_analyzer.get_improvement_report()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ErrorAnalyzer' object has no attribute 'get_improvement_report'
+"
+2025-01-11T20:11:19.003409,ProjectGenerationError,"expected str, bytes or os.PathLike object, not ErrorTracker",project_generation,CRITICAL,"{""project_dir"": ""src\\warehouse\\web-app\\WebApp"", ""task_description"": ""Create a full-stack web application with Flask backend, React frontend, PostgreSQL database, and user authentication system""}","Traceback (most recent call last):
+  File ""C:\Windows\System32\cc-working-dir\SEA\src\agent\project_generator.py"", line 176, in create_project_structure
+    error_report = self.error_analyzer.generate_report()
+  File ""C:\Windows\System32\cc-working-dir\SEA\src\sea_agent_errors\error_analyzer.py"", line 132, in generate_report
+    analysis = self.analyze_errors(time_window)
+  File ""C:\Windows\System32\cc-working-dir\SEA\src\sea_agent_errors\error_analyzer.py"", line 26, in analyze_errors
+    csv_path = os.path.join(self.log_dir, 'error_log.csv')
+  File ""<frozen ntpath>"", line 100, in join
+TypeError: expected str, bytes or os.PathLike object, not ErrorTracker
+"

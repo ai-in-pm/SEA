@@ -1,0 +1,14 @@
+[
+  {
+    "timestamp": "2025-01-11T20:11:19.003409",
+    "error_type": "ProjectGenerationError",
+    "error_message": "expected str, bytes or os.PathLike object, not ErrorTracker",
+    "context": {
+      "project_dir": "src\\warehouse\\web-app\\WebApp",
+      "task_description": "Create a full-stack web application with Flask backend, React frontend, PostgreSQL database, and user authentication system"
+    },
+    "stack_trace": "Traceback (most recent call last):\n  File \"C:\\Windows\\System32\\cc-working-dir\\SEA\\src\\agent\\project_generator.py\", line 176, in create_project_structure\n    error_report = self.error_analyzer.generate_report()\n  File \"C:\\Windows\\System32\\cc-working-dir\\SEA\\src\\sea_agent_errors\\error_analyzer.py\", line 132, in generate_report\n    analysis = self.analyze_errors(time_window)\n  File \"C:\\Windows\\System32\\cc-working-dir\\SEA\\src\\sea_agent_errors\\error_analyzer.py\", line 26, in analyze_errors\n    csv_path = os.path.join(self.log_dir, 'error_log.csv')\n  File \"<frozen ntpath>\", line 100, in join\nTypeError: expected str, bytes or os.PathLike object, not ErrorTracker\n",
+    "component": "project_generation",
+    "severity": "CRITICAL"
+  }
+]
